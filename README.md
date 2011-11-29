@@ -7,17 +7,15 @@ jQuery plugin showing latest posts from Google+ profiles/pages.
 1. Include plugin CSS file `google-plus-widget.css`, upload plugin images from `img` folder
 2. Include jQuery library and plugin file `google.plus.widget.js`
 3. Create container element inside your HTML document:
-
-```
-<div id="google-plus-widget"></div>
-```
+    ```
+    <div id="google-plus-widget"></div>
+    ```
 
 4. Initialize plugin:
-
-```
-$.fn.googlePlusWidget.defaults.key = 'YOUR_API_KEY'; // see `Obtaining Google Plus API key` below
-$('#google-plus-widget').googlePlusWidget({user: 'USER_OR_PAGE_ID'});
-```
+    ```
+    $.fn.googlePlusWidget.defaults.key = 'YOUR_API_KEY'; // see `Obtaining Google Plus API key` below
+    $('#google-plus-widget').googlePlusWidget({user: 'USER_OR_PAGE_ID'});
+    ```
 
 #### Obtaining Google Plus API key
 
