@@ -1,0 +1,275 @@
+/**
+ * Google Plus Widget
+ *
+ * jQuery plugin showing latest posts from Google+ profiles/pages.
+ * Usage instructions: https://github.com/kminek/Google-Plus-Widget
+ *
+ * @copyright Copyright 2011, Grzegorz Wójcik <kontakt@kminek.pl> (http://www.kminek.pl)
+ * @link https://github.com/kminek/Google-Plus-Widget
+ * @license BSD License (http://www.kminek.pl/bsdlicense.txt)
+ *
+ */
+
+.google-plus-widget-container
+{
+    font-family: Verdana, sans-serif;
+    line-height: 18px;
+    background: #333;
+    margin: 0 0 18px 0;
+    padding: 9px 9px 8px 9px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.google-plus-widget-container a
+{
+    outline: 0;
+    text-decoration: none;
+}
+
+/**
+ * =google-plus-widget-profile
+ **************************************************************************************************/
+
+.google-plus-widget-profile
+{
+    height: 35px;
+    padding-right: 9px;
+    background: url(../img/gpw-profile.jpg) repeat-x #222;
+    margin: -9px -9px 1px -9px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.google-plus-widget-profile a
+{
+    line-height: 35px;
+    display: block;
+    color: #e41913;
+    font-weight: bold;
+    font-size: 11px;
+    padding-left: 18px;
+    background: url(../img/gpw-logo.png) 100% 8px no-repeat;
+    text-shadow: 1px 1px #000;
+}
+
+.google-plus-widget-profile a span
+{
+    color: #eee;
+    font-weight: normal;
+    display: none;
+}
+
+.google-plus-widget-profile a:hover span
+{
+    display: inline;
+}
+
+/**
+ * =google-plus-widget-item
+ **************************************************************************************************/
+
+.google-plus-widget-item
+{
+    list-style: none;
+    position: relative;
+}
+
+/**
+ * =google-plus-widget-title
+ **************************************************************************************************/
+
+.google-plus-widget-title
+{
+    position: relative;
+}
+
+.google-plus-widget-error,
+.google-plus-widget-title .google-plus-widget-title-link a
+{
+    display: block;
+    background: url(../img/gpw-title.png) 0 100% no-repeat #808080;
+    padding: 8px 9px;
+    border-bottom: 1px solid #575757;
+    margin-bottom: 1px;
+    padding-left: 42px;
+    padding-right: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: 0 -1px #000000;
+    color: #fff;
+}
+
+.google-plus-widget-error
+{
+    color: red;
+    padding: 8px 9px;
+}
+
+.google-plus-widget-title .google-plus-widget-title-link a.active,
+.google-plus-widget-title .google-plus-widget-title-link a:hover
+{
+    background-position: -1040px 100%;
+}
+
+/**
+ * =google-plus-widget-content
+ **************************************************************************************************/
+
+.google-plus-widget-content
+{
+    display: none;
+    font-size: 11px;
+    color: #fff;
+    padding: 8px 9px;
+    background: #505050;
+    color: #e0e0e0;
+    border-top: 1px solid #444;
+    margin-bottom: 1px;
+}
+
+.google-plus-widget-content a
+{
+    color: #12b6fd;
+    font-weight: bold;
+}
+
+.google-plus-widget-content a:hover
+{
+    color: #fff;
+}
+
+/**
+ * =google-plus-widget-more
+ **************************************************************************************************/
+
+.google-plus-widget-more a
+{
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: url(../img/gpw-more.jpg) repeat-x #21abb8;
+    padding: 8px 9px;
+    border-bottom: 1px solid #044793;
+    margin-bottom: 1px;
+    text-shadow: 0 -1px #000000;
+}
+
+.google-plus-widget-more a:hover
+{
+    background-position: 0 -36px;
+}
+
+/**
+ * =google-plus-widget-avatar
+ **************************************************************************************************/
+
+.google-plus-widget-avatar
+{
+    position: absolute;
+    top: 6px;
+    left: 9px;
+    z-index: 9999;
+}
+
+.google-plus-widget-avatar img
+{
+    display: block;
+    border: 2px solid #333;
+}
+
+.google-plus-widget-avatar a:hover img
+{
+    border-color: #45f6ff;
+}
+
+/**
+ * =google-plus-widget-comments
+ **************************************************************************************************/
+
+.google-plus-widget-comments
+{
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    z-index: 9999;
+}
+
+.google-plus-widget-comments a
+{
+    display: block;
+    height: 10px;
+    overflow: hidden;
+    line-height: 10px;
+    color: #b1b1b1;
+    font-family: Tahoma, sans-serif;
+    font-size: 10px;
+    padding-right: 12px;
+    background: url(../img/gpw-comments.png) 100% 2px no-repeat;
+}
+
+.google-plus-widget-comments a:hover
+{
+    color: #ebebeb;
+    background-position: 100% -98px;
+}
+
+/**
+ * =google-plus-widget-permalink
+ **************************************************************************************************/
+
+.google-plus-widget-permalink
+{
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    z-index: 9999;
+}
+
+.google-plus-widget-permalink a
+{
+    display: block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    text-indent: -9999px;
+    background: url(../img/gpw-permalink.png) no-repeat;
+}
+
+.google-plus-widget-permalink a:hover
+{
+    background-position: 0 -16px;
+}
+
+/**
+ * =google-plus-widget-attachment
+ **************************************************************************************************/
+
+.google-plus-widget-attachment
+{
+    background: url(../img/gpw-attachment.png) 0 2px no-repeat;
+    padding-left: 20px;
+}
+
+/**
+ * =google-plus-widget-hr
+ **************************************************************************************************/
+
+.google-plus-widget-hr
+{
+    height: 0;
+    overflow: hidden;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #575757;
+    margin: 8px -9px;
+}

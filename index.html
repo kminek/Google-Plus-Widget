@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/google-plus-widget.css" />
+    <title>Google Plus Widget</title>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <h4>Google Plus Widget</h4>
+
+    <p>
+        jQuery plugin showing latest posts from Google+ profiles/pages.<br />
+        Usage instructions: <a href="https://github.com/kminek/Google-Plus-Widget">https://github.com/kminek/Google-Plus-Widget</a>
+    </p>
+
+    <div id="google-plus-widget-1"></div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/google.plus.widget.js"></script>
+    <script type="text/javascript">
+
+        $.fn.googlePlusWidget.defaults.key = 'AIzaSyCXxTPoMQK0Y6Y-Hcx4h3J6u2qFgyQ24M4';
+        $('#google-plus-widget-1').googlePlusWidget({user: '107345380056943591322'});
+
+    </script>
+
+</div>
+
+</body>
+</html>
