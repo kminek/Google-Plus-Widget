@@ -1,0 +1,10 @@
+{
+    "name": "google-plus-widget",
+    "homepage": "https://github.com/kminek/Google-Plus-Widget",
+    "authors": [
+        "Grzesiek W <kontakt@kminek.pl>"
+    ],
+    "description": "jQuery plugin showing latest posts from Google+ profiles/pages",
+    "main": "js/google.plus.widget.js",
+    "license": "MIT"
+}
